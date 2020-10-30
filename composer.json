@@ -1,0 +1,24 @@
+{
+	"name": "phpstan-error-test",
+	"type": "project",
+	"license": [
+		"MIT"
+	],
+	"config": {
+		"secure-http": false,
+		"preferred-install": "dist",
+		"platform": {
+			"php": "7.3"
+		}
+	},
+	"scripts": {
+		"phpstan": "php -d memory_limit=256M -n ./vendor/bin/phpstan analyse"
+	},
+	"require": {
+		"php": "7.3",
+		"texy/texy": "2.9.2"
+	},
+	"require-dev": {
+		"phpstan/phpstan": "0.12.52"
+	}
+}

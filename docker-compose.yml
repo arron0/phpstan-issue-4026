@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  mg-prodcomp:
+    container_name: phpstan-test
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+      - composer-cache:/root/.composer
+    stdin_open: true
+    tty: true
+
+volumes:
+  composer-cache:
